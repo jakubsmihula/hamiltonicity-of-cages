@@ -2,6 +2,8 @@ import os
 
 
 TSP_FILE_FOLDER = "/Users/jakubsmihula/PycharmProjects/hamiltonicity-of-cages/Graphs/Input for TSP"
+RECORD_FOLDER = "/Users/jakubsmihula/PycharmProjects/hamiltonicity-of-cages/Graphs/Record/"
+CAGES_FOLDER = "/Users/jakubsmihula/PycharmProjects/hamiltonicity-of-cages/Graphs/Cages/"
 
 def exoo_adjacency_list_transformation(file_path):
     with open(file_path, 'r') as file:
@@ -9,14 +11,17 @@ def exoo_adjacency_list_transformation(file_path):
 
     modified_lines = []
     for i, line in enumerate(lines):
-        modified_lines.append(f"{i}: {line.strip()}\n")
+        if line.find(':') == -1:
+            modified_lines.append(f"{i}: {line.strip()}\n")
+        else:
+            modified_lines.append(f"{line.strip()}\n")
 
     with open(file_path, 'w') as file:
         file.writelines(modified_lines)
 
 
 def convert_adj_list_to_tsp(input_file, output_folder) :
-    adj_dict = {}  # Original vertex id -> list of neighbor vertex ids
+    adj_dict = {}
     vertex_set = set()
 
     with open(input_file, 'r') as f:
@@ -77,6 +82,6 @@ def convert_adj_list_to_tsp(input_file, output_folder) :
 
 
 if __name__ == "__main__":
-    file_path = "/Users/jakubsmihula/Documents/Matfyz/BC thesis/Graphs/Record/3 - 14.lst"
+    file_path = RECORD_FOLDER + "3 - 14.lst"
     exoo_adjacency_list_transformation(file_path)
-    convert_adj_list_to_tsp("/Users/jakubsmihula/Documents/Matfyz/BC thesis/Graphs/Cages/3 - 5.lst", TSP_FILE_FOLDER)
+    # convert_adj_list_to_tsp("/Users/jakubsmihula/Documents/Matfyz/BC thesis/Graphs/Cages/3 - 5.lst", TSP_FILE_FOLDER)
