@@ -1,0 +1,122 @@
+<!-- graph.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Graph Details</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header>
+    <h1 id="graph-title">Graph Details</h1>
+    <p id="graph-description"></p>
+    <nav>
+      <ul>
+        <li><a href="graphs.html">← Back to Graphs Page</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section id="graph-image">
+      <h2>Graph Image</h2>
+      <img id="graph-img" src="" alt="Graph image" style="max-width: 100%; border: 1px solid #ccc;" />
+    </section>
+
+    <section id="graph-info">
+      <h2>Graph Parameters</h2>
+      <ul id="parameters"></ul>
+    </section>
+
+    <section id="graph-adjacency">
+      <h2>Adjacency List</h2>
+      <pre id="adjacency-list">Loading...</pre>
+    </section>
+
+    <section id="hamilton-cycle">
+      <h2>Hamiltonian Cycle</h2>
+      <pre id="hamilton-path">Loading...</pre>
+    </section>
+
+    <section id="graph-payload">
+      <h2>Concorde TSP solver input file</h2>
+      <p id="payload-link-container">Loading...</p>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Jakub Smihula</p>
+  </footer>
+
+  <script>
+    const params = new URLSearchParams(window.location.search);
+    const graphId = params.get("id");
+
+    fetch("graphs.json")
+      .then(res => res.json())
+      .then(graphs => {
+        if (graphId && graphs[graphId]) {
+          const graph = graphs[graphId];
+          document.getElementById("graph-title").textContent = graph.title;
+          document.getElementById("graph-description").textContent = graph.description || "";
+          document.getElementById("graph-img").src = graph.image;
+
+          const paramList = document.getElementById("parameters");
+          for (const [key, val] of Object.entries(graph.parameters)) {
+            const li = document.createElement("li");
+            li.textContent = `${key}: ${val}`;
+            paramList.appendChild(li);
+          }
+
+          if (graph.graph) {
+            fetch(graph.graph)
+              .then(res => res.text())
+              .then(text => {
+                document.getElementById("adjacency-list").textContent = text;
+              })
+              .catch(() => {
+                document.getElementById("adjacency-list").textContent = "Adjacency list not available.";
+              });
+          }
+
+          const hamiltonSection = document.getElementById("hamilton-cycle");
+
+          if (graph.hamiltonCycleFile) {
+            fetch(graph.hamiltonCycleFile)
+              .then(res => res.text())
+              .then(text => {
+                document.getElementById("hamilton-path").textContent = text;
+              })
+              .catch(() => {
+                document.getElementById("hamilton-path").textContent = "Hamiltonian cycle info not available.";
+              });
+          } else {
+            hamiltonSection.remove();
+          }
+
+          const payloadContainer = document.getElementById("payload-link-container");
+          const payloadSection = document.getElementById("graph-payload");
+
+          if (graph.tspInput) {
+            const link = document.createElement("a");
+            link.href = graph.tspInput;
+            link.target = "_blank";
+            link.rel = "noopener noreferrer";
+            link.textContent = "Save Concorde TSP solver input file";
+            payloadContainer.innerHTML = "";
+            payloadContainer.appendChild(link);
+          } else {
+            payloadSection.remove();
+          }
+        } else {
+          document.querySelector("main").innerHTML = "<p>Graph not found.</p>";
+        }
+      })
+      .catch(err => {
+        console.error("Could not load graph data:", err);
+        document.querySelector("main").innerHTML = "<p>Error loading graph data.</p>";
+      });
+  </script>
+</body>
+</html>

@@ -1,0 +1,184 @@
+{
+  "3,5-cage": {
+    "title": "Petersen Graph",
+    "description": "(3,5)-cage",
+    "image": "images/cages/3-5.png",
+    "parameters": {
+      "Vertices": 10,
+      "Edges": 15,
+      "Degree": 3,
+      "Girth": 5
+    },
+    "tspInput" : "Input for TSP/3 - 5 - TSP.tsp",
+    "graph": "Graphs/Cages/3 - 5.lst",
+    "hamiltonCycleFile": null
+  },
+  "3,6-cage": {
+    "title": "Heawood Graph",
+    "description": "(3,6)-cage",
+    "image": "images/cages/3-6.png",
+    "parameters": {
+      "Vertices": 14,
+      "Edges": 21,
+      "Degree": 3,
+      "Girth": 6
+    },
+    "tspInput" : null,
+    "hamiltonCycleFile": null,
+    "graph": "Graphs/Cages/3 - 6.lst"
+  },
+  "3,7-cage": {
+    "title": "McGee Graph",
+    "description": "(3,7)-cage",
+    "image": "images/cages/3-7.png",
+    "parameters": {
+      "Vertices": 24,
+      "Edges": 36,
+      "Degree": 3,
+      "Girth": 7
+    },
+    "tspInput" : null,
+    "hamiltonCycleFile": null,
+    "graph": "Graphs/Cages/3 - 7.lst"
+  },
+  "3,8-cage": {
+    "title": "Tutte-Coxeter Graph",
+    "description": "(3,8)-cage",
+    "image": "images/cages/3-8.png",
+    "parameters": {
+      "Vertices": 30,
+      "Edges": 45,
+      "Degree": 3,
+      "Girth": 8
+    },
+    "tspInput" : null,
+    "hamiltonCycleFile": null,
+    "graph": "Graphs/Cages/3 - 8.lst"
+  },
+  "3,9-cage": {
+    "title": "(3,9)-cage",
+    "description": "This page contains just one cage, but there are 17 other cages with parameters (3,9).",
+    "image": "images/cages/3-9.png",
+    "parameters": {
+      "Vertices": 58,
+      "Edges": 87,
+      "Degree": 3,
+      "Girth": 9
+    },
+    "tspInput" : null,
+    "hamiltonCycleFile": null,
+    "graph": "Graphs/Cages/3 - 9 - 1.lst"
+  },
+  "3,10-cage": {
+    "title": "(3,10)-cage",
+    "description": "This page contains just one cage, but there are 2 other cages with parameters (3,10).",
+    "image": "images/cages/3-10.png",
+    "parameters": {
+      "Vertices": 70,
+      "Edges": 105,
+      "Degree": 3,
+      "Girth": 10
+    },
+    "tspInput" : null,
+    "hamiltonCycleFile": null,
+    "graph": "Graphs/Cages/3 - 10 - 1.lst"
+  },
+  "3,11-cage": {
+    "title": "Balaban Graph",
+    "description": "(3,11)-cage",
+    "image": "images/cages/3-11.png",
+    "parameters": {
+      "Vertices": 112,
+      "Edges": 168,
+      "Degree": 3,
+      "Girth": 11
+    },
+    "tspInput" : null,
+    "hamiltonCycleFile": null,
+    "graph": "Graphs/Cages/3 - 11.lst"
+  },
+  "3,12-cage": {
+    "title": "Benson Graph ",
+    "description": "(3,12)-cage",
+    "image": "images/cages/3-12.png",
+    "parameters": {
+      "Vertices": 126,
+      "Edges": 189,
+      "Degree": 3,
+      "Girth": 12
+    },
+    "tspInput" : null,
+    "hamiltonCycleFile": null,
+    "graph": "Graphs/Cages/3 - 12.lst"
+  },
+  "4,5-cage": {
+    "title": "Robertson Graph ",
+    "description": "(4,5)-cage",
+    "image": "images/cages/4-5.png",
+    "parameters": {
+      "Vertices": 19,
+      "Edges": 38,
+      "Degree": 4,
+      "Girth": 5
+    },
+    "tspInput" : null,
+    "hamiltonCycleFile": null,
+    "graph": "Graphs/Cages/4 - 5.lst"
+  },
+  "5,5-cage": {
+    "title": "(5,5)-cage",
+    "description": "This page contains just one cage, but there are 2 other cages with parameters (5,5).",
+    "image": "images/cages/5-5.png",
+    "parameters": {
+      "Vertices": 30,
+      "Edges": 75,
+      "Degree": 5,
+      "Girth": 5
+    },
+    "tspInput" : null,
+    "hamiltonCycleFile": null,
+    "graph": "Graphs/Cages/5 - 5 - 1.lst"
+  },
+  "6,5-cage": {
+    "title": "(6,5)-cage",
+    "description": "",
+    "image": "images/cages/6-5.png",
+    "parameters": {
+      "Vertices": 40,
+      "Edges": 120,
+      "Degree": 6,
+      "Girth": 5
+    },
+    "tspInput" : null,
+    "hamiltonCycleFile": null,
+    "graph": "Graphs/Cages/6 - 5.lst"
+  },
+  "7,5-cage": {
+    "title": "(7,5)-cage",
+    "description": "",
+    "image": "images/cages/7-5.png",
+    "parameters": {
+      "Vertices": 50,
+      "Edges": 175,
+      "Degree": 7,
+      "Girth": 5
+    },
+    "tspInput" : null,
+    "hamiltonCycleFile": null,
+    "graph": "Graphs/Cages/7 - 5.lst"
+  },
+    "4,7-cage": {
+    "title": "(4,7)-cage",
+    "description": "",
+    "image": "images/cages/4-7.png",
+    "parameters": {
+      "Vertices": 67,
+      "Edges": 134,
+      "Degree": 4,
+      "Girth": 7
+    },
+    "tspInput" : null,
+    "hamiltonCycleFile": null,
+    "graph": "Graphs/Cages/4 - 7.lst"
+  }
+}
