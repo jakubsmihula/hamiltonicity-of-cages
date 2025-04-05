@@ -11,7 +11,7 @@
     },
     "tspInput" : "Input for TSP/3 - 5 - TSP.tsp",
     "graph": "Graphs/Cages/3 - 5.lst",
-    "hamiltonCycleFile": null
+    "hamiltonCycleFile": "Output from TSP/3 - 5 - OUTPUT.ham"
   },
   "3,6-cage": {
     "title": "Heawood Graph",
@@ -23,8 +23,8 @@
       "Degree": 3,
       "Girth": 6
     },
-    "tspInput" : null,
-    "hamiltonCycleFile": null,
+    "tspInput" : "Input for TSP/3 - 6 - TSP.tsp",
+    "hamiltonCycleFile": "Output from TSP/3 - 6 - OUTPUT.ham",
     "graph": "Graphs/Cages/3 - 6.lst"
   },
   "3,7-cage": {
@@ -37,8 +37,8 @@
       "Degree": 3,
       "Girth": 7
     },
-    "tspInput" : null,
-    "hamiltonCycleFile": null,
+    "tspInput" : "Input for TSP/3 - 7 - TSP.tsp",
+    "hamiltonCycleFile": "Output from TSP/3 - 7 - OUTPUT.ham",
     "graph": "Graphs/Cages/3 - 7.lst"
   },
   "3,8-cage": {
@@ -51,8 +51,8 @@
       "Degree": 3,
       "Girth": 8
     },
-    "tspInput" : null,
-    "hamiltonCycleFile": null,
+    "tspInput" : "Input for TSP/3 - 8 - TSP.tsp",
+    "hamiltonCycleFile": "Output from TSP/3 - 8 - OUTPUT.ham",
     "graph": "Graphs/Cages/3 - 8.lst"
   },
   "3,9-cage": {
@@ -65,8 +65,8 @@
       "Degree": 3,
       "Girth": 9
     },
-    "tspInput" : null,
-    "hamiltonCycleFile": null,
+    "tspInput" : "Input for TSP/3 - 9 - 1 - TSP.tsp",
+    "hamiltonCycleFile": "Output from TSP/3 - 9 - OUTPUT.ham",
     "graph": "Graphs/Cages/3 - 9 - 1.lst"
   },
   "3,10-cage": {
@@ -79,8 +79,8 @@
       "Degree": 3,
       "Girth": 10
     },
-    "tspInput" : null,
-    "hamiltonCycleFile": null,
+    "tspInput" : "Input for TSP/3 - 10 - 1 - TSP.tsp",
+    "hamiltonCycleFile": "Output from TSP/3 - 10 - OUTPUT.ham",
     "graph": "Graphs/Cages/3 - 10 - 1.lst"
   },
   "3,11-cage": {
@@ -93,8 +93,8 @@
       "Degree": 3,
       "Girth": 11
     },
-    "tspInput" : null,
-    "hamiltonCycleFile": null,
+    "tspInput" : "Input for TSP/3 - 11 - TSP.tsp",
+    "hamiltonCycleFile": "Output from TSP/3 - 11 - OUTPUT.ham",
     "graph": "Graphs/Cages/3 - 11.lst"
   },
   "3,12-cage": {
@@ -107,8 +107,8 @@
       "Degree": 3,
       "Girth": 12
     },
-    "tspInput" : null,
-    "hamiltonCycleFile": null,
+    "tspInput" : "Input for TSP/3 - 12 - TSP.tsp",
+    "hamiltonCycleFile": "Output from TSP/3 - 12 - OUTPUT.ham",
     "graph": "Graphs/Cages/3 - 12.lst"
   },
   "4,5-cage": {
@@ -121,8 +121,8 @@
       "Degree": 4,
       "Girth": 5
     },
-    "tspInput" : null,
-    "hamiltonCycleFile": null,
+    "tspInput" : "Input for TSP/4 - 5 - TSP.tsp",
+    "hamiltonCycleFile": "Output from TSP/4 - 5 - OUTPUT.ham",
     "graph": "Graphs/Cages/4 - 5.lst"
   },
   "5,5-cage": {
@@ -135,8 +135,8 @@
       "Degree": 5,
       "Girth": 5
     },
-    "tspInput" : null,
-    "hamiltonCycleFile": null,
+    "tspInput" : "Input for TSP/5 - 5 - TSP.tsp",
+    "hamiltonCycleFile": "Output from TSP/5 - 5 - OUTPUT.ham",
     "graph": "Graphs/Cages/5 - 5 - 1.lst"
   },
   "6,5-cage": {
@@ -149,8 +149,8 @@
       "Degree": 6,
       "Girth": 5
     },
-    "tspInput" : null,
-    "hamiltonCycleFile": null,
+    "tspInput" : "Input for TSP/6 - 5 - TSP.tsp",
+    "hamiltonCycleFile": "Output from TSP/6 - 5 - OUTPUT.ham",
     "graph": "Graphs/Cages/6 - 5.lst"
   },
   "7,5-cage": {
@@ -163,11 +163,11 @@
       "Degree": 7,
       "Girth": 5
     },
-    "tspInput" : null,
-    "hamiltonCycleFile": null,
+    "tspInput" : "Input for TSP/7 - 5 - TSP.tsp",
+    "hamiltonCycleFile": "Output from TSP/7 - 5 - OUTPUT.ham",
     "graph": "Graphs/Cages/7 - 5.lst"
   },
-    "4,7-cage": {
+  "4,7-cage": {
     "title": "(4,7)-cage",
     "description": "",
     "image": "images/cages/4-7.png",
@@ -177,8 +177,8 @@
       "Degree": 4,
       "Girth": 7
     },
-    "tspInput" : null,
-    "hamiltonCycleFile": null,
+    "tspInput" : "Input for TSP/4 - 7 - TSP.tsp",
+    "hamiltonCycleFile": "Output from TSP/4 - 7 - OUTPUT.ham",
     "graph": "Graphs/Cages/4 - 7.lst"
   }
 }
