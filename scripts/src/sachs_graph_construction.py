@@ -1,36 +1,40 @@
 import networkx as nx
 import matplotlib.pyplot as plt
 import numpy as np
+import copy
+
+
+# Global memoization dictionary
+graph_memo = {}
 
 def v_y_graph(v, y):
-    print(v,y)
-    if y == 2: # base case where we want to have girth 2
+    if (v, y) in graph_memo:
+        return graph_memo[(v, y)]
+
+    print(v, y)  # Optional: helpful to see how deep it's going
+
+    if y == 2:
         G = nx.MultiGraph()
-        G.add_node(0),
-        G.add_node(1),
-
+        G.add_node(0)
+        G.add_node(1)
         for _ in range(v):
-            G.add_edge(0,1)
-
+            G.add_edge(0, 1)
+        graph_memo[(v, y)] = G
         return G
 
-    if v == 2: #Base case where we want to have regularity 2
+    if v == 2:
         cycle = nx.cycle_graph(y)
         G = nx.MultiGraph(cycle)
+        graph_memo[(v, y)] = G
         return G
 
-    G_delta = v_y_graph(v-1, y)
+    G_delta = v_y_graph(v - 1, y)
     G_lambda = v_y_graph(G_delta.number_of_nodes(), y - 1)
 
-    # draw_multi_graph(G_delta)
-    # draw_multi_graph(G_lambda)
-
     composed_g = replace_nodes_with_graph(G_delta, G_lambda)
-
-    # nx.draw(composed_g, with_labels=True, node_color='lightblue', edge_color='gray', node_size=700)
-    # plt.show()
-
+    graph_memo[(v, y)] = composed_g
     return composed_g
+
 
 
 def draw_multi_graph(G):

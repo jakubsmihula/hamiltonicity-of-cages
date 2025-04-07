@@ -80,9 +80,80 @@ def convert_adj_list_to_tsp(input_file, output_folder) :
     print(f"Converted TSP file saved to: {output_file_path}")
 
 
+import os
+import pandas as pd
+
+
+def adj_list_to_graph_editor(file_path, output_folder):
+    try:
+        # Read the adjacency list from file
+        with open(file_path, 'r') as f:
+            lines = f.readlines()
+
+        # Process vertices and edges
+        vertices = set()
+        edges = []
+        added_edges = set()  # Track undirected edges
+
+        for line in lines:
+            parts = line.strip().split()
+            if not parts:
+                continue
+            node = parts[0].strip(":")
+            vertices.add(node)
+
+            for neighbor in parts[1:]:
+                neighbor = neighbor.strip()
+                vertices.add(neighbor)
+
+                # Use frozenset to track edge pairs regardless of direction
+                edge_pair = frozenset({node, neighbor})
+                if edge_pair not in added_edges:
+                    edges.append((node, neighbor))
+                    added_edges.add(edge_pair)
+
+        # Convert to sorted list of vertices
+        vertices = sorted(vertices)
+
+        # Create DataFrames
+        vertices_df = pd.DataFrame({'id': vertices, 'label': vertices})
+        edges_df = pd.DataFrame({
+            'source': [e[0] for e in edges],
+            'target': [e[1] for e in edges],
+            'weight': 1
+        })
+
+        # Create output directory if it doesn't exist
+        os.makedirs(output_folder, exist_ok=True)
+
+        # Get base filename
+        base_name = os.path.splitext(os.path.basename(file_path))[0]
+
+        # Save to CSV
+        vertices_path = os.path.join(output_folder, f"{base_name}_vertices.csv")
+        edges_path = os.path.join(output_folder, f"{base_name}_edges.csv")
+
+        vertices_df.to_csv(vertices_path, index=False)
+        edges_df.to_csv(edges_path, index=False)
+
+        print(f"Files created:\n- {vertices_path}\n- {edges_path}")
+        return True
+
+    except FileNotFoundError:
+        print(f"Error: File not found at {file_path}")
+        return False
+    except PermissionError:
+        print(f"Error: Permission denied in {output_folder}")
+        return False
+    except Exception as e:
+        print(f"Unexpected error: {str(e)}")
+        return False
+
 
 if __name__ == "__main__":
-    file_path = CAGES_FOLDER + "3 - 7.lst"
-    # exoo_adjacency_list_transformation(file_path)
-    convert_adj_list_to_tsp(file_path, TSP_FILE_FOLDER)
+    file_path = '/Users/jakubsmihula/Documents/Matfyz/BC thesis/Graphs/Record/13 - 5.lst'
+    FOLDER = '/Users/jakubsmihula/Documents/Matfyz/BC thesis/Graphs/GraphImagesInput'
+    exoo_adjacency_list_transformation(file_path)
+    # convert_adj_list_to_tsp(file_path, TSP_FILE_FOLDER)
     # convert_adj_list_to_tsp("/Users/jakubsmihula/Documents/Matfyz/BC thesis/Graphs/Cages/3 - 5.lst", TSP_FILE_FOLDER)
+    adj_list_to_graph_editor(file_path, FOLDER)

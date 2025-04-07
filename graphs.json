@@ -180,5 +180,159 @@
     "tspInput" : "Input for TSP/4 - 7 - TSP.tsp",
     "hamiltonCycleFile": "Output from TSP/4 - 7 - OUTPUT.ham",
     "graph": "Graphs/Cages/4 - 7.lst"
+  },
+  "3,14-rec": {
+    "title": "Rec(3,14)",
+    "description": "",
+    "image": "images/record/3-14.png",
+    "parameters": {
+      "Vertices": 384,
+      "Edges": 576,
+      "Degree": 3,
+      "Girth": 14
+    },
+    "tspInput" : null,
+    "hamiltonCycleFile": null,
+    "graph": null
+  },
+  "3,16-rec": {
+    "title": "Rec(3,16)",
+    "description": "",
+    "image": "images/record/3-16.png",
+    "parameters": {
+      "Vertices": 960,
+      "Edges": 1440,
+      "Degree": 3,
+      "Girth": 16
+    },
+    "tspInput" : null,
+    "hamiltonCycleFile": null,
+    "graph": null
+  },
+  "3,17-rec": {
+    "title": "Rec(3,17)",
+    "description": "",
+    "image": "images/record/3-17.png",
+    "parameters": {
+      "Vertices": 2176,
+      "Edges": 3264,
+      "Degree": 3,
+      "Girth": 17
+    },
+    "tspInput" : null,
+    "hamiltonCycleFile": null,
+    "graph": null
+  },
+  "3,18-rec": {
+    "title": "Rec(3,18)",
+    "description": "",
+    "image": "images/record/3-18.png",
+    "parameters": {
+      "Vertices": 2560,
+      "Edges": 3840,
+      "Degree": 3,
+      "Girth": 18
+    },
+    "tspInput" : null,
+    "hamiltonCycleFile": null,
+    "graph": null
+  },
+  "3,20-rec": {
+    "title": "Rec(3,20)",
+    "description": "",
+    "image": "images/record/3-20.png",
+    "parameters": {
+      "Vertices": 5376,
+      "Edges": 8064,
+      "Degree": 3,
+      "Girth": 20
+    },
+    "tspInput" : null,
+    "hamiltonCycleFile": null,
+    "graph": null
+  },
+  "4,9-rec": {
+    "title": "Rec(4,9)",
+    "description": "",
+    "image": "images/record/4-9.png",
+    "parameters": {
+      "Vertices": 275,
+      "Edges": 550,
+      "Degree": 4,
+      "Girth": 9
+    },
+    "tspInput" : null,
+    "hamiltonCycleFile": null,
+    "graph": null
+  },
+  "4,10-rec": {
+    "title": "Rec(4,10)",
+    "description": "",
+    "image": "images/record/4-10.png",
+    "parameters": {
+      "Vertices": 384,
+      "Edges": 768,
+      "Degree": 4,
+      "Girth": 10
+    },
+    "tspInput" : null,
+    "hamiltonCycleFile": null,
+    "graph": null
+  },
+  "5,10-rec": {
+    "title": "Rec(5,10)",
+    "description": "",
+    "image": "images/record/5-10.png",
+    "parameters": {
+      "Vertices": 1458,
+      "Edges": 3645,
+      "Degree": 5,
+      "Girth": 10
+    },
+    "tspInput" : null,
+    "hamiltonCycleFile": null,
+    "graph": null
+  },
+  "7,8-rec": {
+    "title": "Rec(7,8)",
+    "description": "",
+    "image": "images/record/7-8.png",
+    "parameters": {
+      "Vertices": 672,
+      "Edges": 2353,
+      "Degree": 7,
+      "Girth": 8
+    },
+    "tspInput" : null,
+    "hamiltonCycleFile": null,
+    "graph": null
+  },
+  "10,5-rec": {
+    "title": "Rec(10,5)",
+    "description": "",
+    "image": "images/record/10-5.png",
+    "parameters": {
+      "Vertices": 126,
+      "Edges": 630,
+      "Degree": 10,
+      "Girth": 5
+    },
+    "tspInput" : null,
+    "hamiltonCycleFile": null,
+    "graph": null
+  },
+  "12,5-rec": {
+    "title": "Rec(12,5)",
+    "description": "",
+    "image": "images/record/12-5.png",
+    "parameters": {
+      "Vertices": 203,
+      "Edges": 1218,
+      "Degree": 12,
+      "Girth": 5
+    },
+    "tspInput" : null,
+    "hamiltonCycleFile": null,
+    "graph": null
   }
 }
