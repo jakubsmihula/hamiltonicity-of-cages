@@ -11,7 +11,7 @@ def v_y_graph(v, y):
     if (v, y) in graph_memo:
         return graph_memo[(v, y)]
 
-    print(v, y)  # Optional: helpful to see how deep it's going
+    print(v, y)
 
     if y == 2:
         G = nx.MultiGraph()
