@@ -119,7 +119,7 @@ def main():
     v = int(input('v = '))
     y = int(input('y = '))
     G = v_y_graph(v, y)
-    draw_multi_graph(G)
+    # draw_multi_graph(G)
     print(list(G.nodes))
     print(list(G.edges))
 
