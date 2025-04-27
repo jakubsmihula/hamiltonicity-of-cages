@@ -5,25 +5,23 @@ from ortools.constraint_solver import pywrapcp
 
 def parse_graph(filename):
     """Parses the adjacency list and creates a distance matrix."""
-    # Read graph
     graph = {}
     with open(filename, "r") as f:
         for line in f:
             parts = line.strip().split(":")
-            node = int(parts[0]) # Convert to 0-based index
-            neighbors = list(map(lambda x: int(x), parts[1].split()))
+            node = int(parts[0])  # Convert to 0-based index if needed
+            neighbors = list(map(int, parts[1].split()))
             graph[node] = neighbors
 
-    size = len(graph)
+    size = max(graph.keys()) + 1  # Handle graphs not starting at 0
     distance_matrix = [[100000] * size for _ in range(size)]
 
-    for i in range(size):
-        distance_matrix[i][i] = 0  # Distance to self is 0
-        for j in graph[i]:
-            distance_matrix[i][j] = 1  # Distance to neighbor is 1
+    for key, neighbors in graph.items():
+        distance_matrix[key][key] = 0  # Distance to self is 0
+        for neighbor in neighbors:
+            distance_matrix[key][neighbor] = 1  # Distance to neighbor is 1
 
     return distance_matrix
-
 
 def create_data_model(filename):
     """Stores the data for the problem."""
@@ -32,7 +30,6 @@ def create_data_model(filename):
     data["num_vehicles"] = 1
     data["depot"] = 0
     return data
-
 
 def print_solution(manager, routing, solution):
     """Prints solution on console."""
@@ -46,14 +43,13 @@ def print_solution(manager, routing, solution):
         index = solution.Value(routing.NextVar(index))
         route_distance += routing.GetArcCostForVehicle(previous_index, index, 0)
     plan_output += f" {manager.IndexToNode(index)}\n"
-    plan_output += f"Route distance: {route_distance}miles\n"
+    plan_output += f"Route distance: {route_distance} miles\n"
     print(plan_output)
-
 
 def main():
     """Entry point of the program."""
     # Instantiate the data problem.
-    filename = "/Users/jakubsmihula/PycharmProjects/hamiltonicity-of-cages/Graphs/Record/3 - 18.lst"
+    filename = "/Users/jakubsmihula/PycharmProjects/hamiltonicity-of-cages/Graphs/Cages/3 - 6.lst"
     data = create_data_model(filename)
 
     # Create the routing index manager.
@@ -63,7 +59,6 @@ def main():
 
     # Create Routing Model.
     routing = pywrapcp.RoutingModel(manager)
-
 
     def distance_callback(from_index, to_index):
         """Returns the distance between the two nodes."""
@@ -79,9 +74,8 @@ def main():
 
     # Setting first solution heuristic.
     search_parameters = pywrapcp.DefaultRoutingSearchParameters()
-    search_parameters.local_search_metaheuristic = (
-        routing_enums_pb2.LocalSearchMetaheuristic.GUIDED_LOCAL_SEARCH)
-    search_parameters.time_limit.seconds = 100000
+    search_parameters.local_search_metaheuristic = routing_enums_pb2.LocalSearchMetaheuristic.GUIDED_LOCAL_SEARCH
+    search_parameters.time_limit.seconds = 100  # seconds
     search_parameters.log_search = True
 
     # Solve the problem.
@@ -90,7 +84,8 @@ def main():
     # Print solution on console.
     if solution:
         print_solution(manager, routing, solution)
-
+    else:
+        print("No solution found!")
 
 if __name__ == "__main__":
     main()
