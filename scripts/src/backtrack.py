@@ -102,7 +102,7 @@ def find_hamiltonian_cycle_parallel(graph):
 
 if __name__ == '__main__':
     start_time =  time.time()
-    graph, node_labels = parse_graph_from_file('/Users/jakubsmihula/PycharmProjects/hamiltonicity-of-cages/Graphs/Cages/3 - 8.lst')
+    graph, node_labels = parse_graph_from_file('/Users/jakubsmihula/PycharmProjects/hamiltonicity-of-cages/Graphs/Cages/3 - 6.lst')
     result = find_hamiltonian_cycle_parallel(graph)
 
     if result:

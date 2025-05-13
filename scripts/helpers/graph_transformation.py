@@ -1,7 +1,7 @@
 import os
 
 
-TSP_FILE_FOLDER = "/home/jakub/Plocha/Bachelor thesis/Graphs/Input for TSP/"
+TSP_FILE_FOLDER = "/Users/jakubsmihula/PycharmProjects/hamiltonicity-of-cages/Graphs/Input for TSP"
 RECORD_FOLDER = "/home/jakub/Plocha/Bachelor thesis/Graphs/Record/"
 CAGES_FOLDER = "/home/jakub/Plocha/Bachelor thesis/Graphs/Cages/"
 
@@ -43,10 +43,11 @@ def convert_adj_list_to_tsp(input_file, output_folder) :
     mapping = {orig: idx for idx, orig in enumerate(sorted_vertices)}
     n = len(sorted_vertices)
 
-    INF = 10000000000
+    INF = 5
     matrix = [[0 if i == j else INF for j in range(n)] for i in range(n)]
 
     for orig_vertex, neighbors in adj_dict.items():
+        print(f"Processing vertex {orig_vertex} with neighbors {neighbors}")
         i = mapping[orig_vertex]
         for neigh in neighbors:
             j = mapping[neigh]
@@ -150,10 +151,86 @@ def adj_list_to_graph_editor(file_path, output_folder):
         return False
 
 
+import csv
+import os
+import csv
+import os
+
+def parse_lst_file(lines):
+    edges = set()
+    for line in lines:
+        if ':' not in line:
+            continue
+        parts = line.strip().split(':')
+        if len(parts) != 2:
+            continue
+        src = parts[0].strip()
+        targets = parts[1].strip().split()
+        for tgt in targets:
+            if tgt:
+                # Store as sorted tuple to handle undirected edges
+                edge = tuple(sorted((src, tgt)))
+                edges.add(edge)
+    return edges
+
+def parse_ham_file(lines):
+    edges = set()
+    for line in lines[1:]:  # Skip first line
+        parts = line.strip().split()
+        if len(parts) >= 2:
+            edge = tuple(sorted((parts[0], parts[1])))
+            edges.add(edge)
+    return edges
+
+def extract_vertices(edges):
+    vertices = set()
+    for src, tgt in edges:
+        vertices.add(src)
+        vertices.add(tgt)
+    return vertices
+
+def process_files(lst_path, ham_path, output_dir):
+    with open(lst_path, 'r') as f:
+        lst_edges = parse_lst_file(f.readlines())
+
+    with open(ham_path, 'r') as f:
+        ham_edges = parse_ham_file(f.readlines())
+
+    all_vertices = extract_vertices(lst_edges)
+
+    os.makedirs(output_dir, exist_ok=True)
+
+    # Save vertices.csv
+    with open(os.path.join(output_dir, "vertices20.csv"), "w", newline="") as vfile:
+        writer = csv.writer(vfile)
+        writer.writerow(["Id", "Label"])
+        for v in sorted(all_vertices):
+            writer.writerow([v, v])
+
+    # Save edges.csv
+    with open(os.path.join(output_dir, "edges20.csv"), "w", newline="") as efile:
+        writer = csv.writer(efile)
+        writer.writerow(["Source", "Target", "Type", "Weight", "Color"])
+        for src, tgt in lst_edges:
+            color = "1" if ((src, tgt) in ham_edges or (tgt, src) in ham_edges) else "2"
+            writer.writerow([src, tgt, "Undirected", 1, color])
+
+    print(f"Saved vertices and edges to: {output_dir}")
+
+
+
 if __name__ == "__main__":
-    file_path = '/Users/jakubsmihula/Documents/Matfyz/BC thesis/Graphs/Record/13 - 5.lst'
-    FOLDER = '/Users/jakubsmihula/Documents/Matfyz/BC thesis/Graphs/GraphImagesInput'
-    exoo_adjacency_list_transformation(file_path)
-    # convert_adj_list_to_tsp(file_path, TSP_FILE_FOLDER)
+    path = "/Users/jakubsmihula/Documents/Matfyz/BC thesis/Graphs/Record/3 - 25.lst"
+    save_path = "/Users/jakubsmihula/Documents/Matfyz/BC thesis/Graphs/Record/"
+
+    # convert_adj_list_to_tsp(path, save_path)
+
+    ham_path = '/Users/jakubsmihula/Documents/Matfyz/BC thesis/Graphs/OUTPUT/3 - 20 - OUTPUT.ham'
+    lst_path = '/Users/jakubsmihula/Documents/Matfyz/BC thesis/Graphs/Record/3 - 20.lst'
+    FOLDER = '/Users/jakubsmihula/Documents/Matfyz/BC thesis/Graphs/GraphImagesWithHam'
+    # exoo_adjacency_list_transformation(file_path)
+    # convert_adj_list_to_tsp("/Users/jakubsmihula/PycharmProjects/hamiltonicity-of-cages/Graphs/Record/3 - 23.lst", TSP_FILE_FOLDER)
     # convert_adj_list_to_tsp("/Users/jakubsmihula/Documents/Matfyz/BC thesis/Graphs/Cages/3 - 5.lst", TSP_FILE_FOLDER)
-    adj_list_to_graph_editor(file_path, FOLDER)
+    # adj_list_to_graph_editor(file_path, FOLDER)
+
+    # process_files(lst_path, ham_path, FOLDER)

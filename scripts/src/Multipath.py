@@ -87,7 +87,7 @@ def load_graph_from_file(filepath):
     return G
 
 if __name__ == "__main__":
-    graph = load_graph_from_file("/Users/jakubsmihula/PycharmProjects/hamiltonicity-of-cages/Graphs/Cages/3 - 9 - 3.lst")
+    graph = load_graph_from_file("/Users/jakubsmihula/PycharmProjects/hamiltonicity-of-cages/Graphs/Cages/3 - 6.lst")
     start = time.time()
     cycle = parallel_multipath_solver(graph, start_node=1)
     end = time.time()
