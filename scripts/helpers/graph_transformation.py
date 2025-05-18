@@ -175,12 +175,15 @@ def parse_lst_file(lines):
 
 def parse_ham_file(lines):
     edges = set()
-    for line in lines[1:]:  # Skip first line
+    for line in lines[1:]:
         parts = line.strip().split()
         if len(parts) >= 2:
-            edge = tuple(sorted((parts[0], parts[1])))
+            u = str(int(parts[0]) + 1)
+            v = str(int(parts[1]) + 1)
+            edge = tuple((u, v))
             edges.add(edge)
     return edges
+
 
 def extract_vertices(edges):
     vertices = set()
@@ -189,7 +192,7 @@ def extract_vertices(edges):
         vertices.add(tgt)
     return vertices
 
-def process_files(lst_path, ham_path, output_dir):
+def process_files(lst_path, ham_path, output_dir, name):
     with open(lst_path, 'r') as f:
         lst_edges = parse_lst_file(f.readlines())
 
@@ -201,14 +204,14 @@ def process_files(lst_path, ham_path, output_dir):
     os.makedirs(output_dir, exist_ok=True)
 
     # Save vertices.csv
-    with open(os.path.join(output_dir, "vertices20.csv"), "w", newline="") as vfile:
+    with open(os.path.join(output_dir, f"{name}_vertices.csv"), "w", newline="") as vfile:
         writer = csv.writer(vfile)
         writer.writerow(["Id", "Label"])
         for v in sorted(all_vertices):
             writer.writerow([v, v])
 
     # Save edges.csv
-    with open(os.path.join(output_dir, "edges20.csv"), "w", newline="") as efile:
+    with open(os.path.join(output_dir, f"{name}_edges.csv"), "w", newline="") as efile:
         writer = csv.writer(efile)
         writer.writerow(["Source", "Target", "Type", "Weight", "Color"])
         for src, tgt in lst_edges:
@@ -225,12 +228,12 @@ if __name__ == "__main__":
 
     # convert_adj_list_to_tsp(path, save_path)
 
-    ham_path = '/Users/jakubsmihula/Documents/Matfyz/BC thesis/Graphs/OUTPUT/3 - 20 - OUTPUT.ham'
-    lst_path = '/Users/jakubsmihula/Documents/Matfyz/BC thesis/Graphs/Record/3 - 20.lst'
-    FOLDER = '/Users/jakubsmihula/Documents/Matfyz/BC thesis/Graphs/GraphImagesWithHam'
+    ham_path = '/Users/jakubsmihula/Documents/Matfyz/BC thesis/GRAPH_GEPHI/OUTPUT/excess-3-5-1 - OUTPUT.ham'
+    lst_path = '/Users/jakubsmihula/Documents/Matfyz/BC thesis/GRAPH_GEPHI/LST/excess-3-5-1.lst'
+    FOLDER = '/Users/jakubsmihula/Documents/Matfyz/BC thesis/GRAPH_GEPHI/GEPHI IN'
     # exoo_adjacency_list_transformation(file_path)
     # convert_adj_list_to_tsp("/Users/jakubsmihula/PycharmProjects/hamiltonicity-of-cages/Graphs/Record/3 - 23.lst", TSP_FILE_FOLDER)
     # convert_adj_list_to_tsp("/Users/jakubsmihula/Documents/Matfyz/BC thesis/Graphs/Cages/3 - 5.lst", TSP_FILE_FOLDER)
     # adj_list_to_graph_editor(file_path, FOLDER)
 
-    # process_files(lst_path, ham_path, FOLDER)
+    process_files(lst_path, ham_path, FOLDER, "Excess 3 - 5 - 1")

@@ -1,0 +1,40 @@
+Graph Name             Dirac      Ore        Erdos_Hobbs   Jackson   
+----------------------------------------------------------------------
+3 - 10 - 1.lst         NO         NO         NO            NO        
+3 - 10 - 2.lst         NO         NO         NO            NO        
+3 - 10 - 3.lst         NO         NO         NO            NO        
+3 - 11.lst             NO         NO         NO            NO        
+3 - 12.lst             NO         NO         NO            NO        
+3 - 3.lst              YES        YES        YES           YES       
+3 - 4.lst              YES        YES        YES           YES       
+3 - 5.lst              NO         NO         NO            NO        
+3 - 6.lst              NO         NO         NO            NO        
+3 - 7.lst              NO         NO         NO            NO        
+3 - 8.lst              NO         NO         NO            NO        
+3 - 9 - 1.lst          NO         NO         NO            NO        
+3 - 9 - 10.lst         NO         NO         NO            NO        
+3 - 9 - 11.lst         NO         NO         NO            NO        
+3 - 9 - 12.lst         NO         NO         NO            NO        
+3 - 9 - 13.lst         NO         NO         NO            NO        
+3 - 9 - 14.lst         NO         NO         NO            NO        
+3 - 9 - 15.lst         NO         NO         NO            NO        
+3 - 9 - 16.lst         NO         NO         NO            NO        
+3 - 9 - 17.lst         NO         NO         NO            NO        
+3 - 9 - 18.lst         NO         NO         NO            NO        
+3 - 9 - 2.lst          NO         NO         NO            NO        
+3 - 9 - 3.lst          NO         NO         NO            NO        
+3 - 9 - 4.lst          NO         NO         NO            NO        
+3 - 9 - 5.lst          NO         NO         NO            NO        
+3 - 9 - 6.lst          NO         NO         NO            NO        
+3 - 9 - 7.lst          NO         NO         NO            NO        
+3 - 9 - 8.lst          NO         NO         NO            NO        
+3 - 9 - 9.lst          NO         NO         NO            NO        
+4 - 5.lst              NO         NO         NO            NO        
+4 - 7.lst              NO         NO         NO            NO        
+5 - 5 - 1.lst          NO         NO         NO            NO        
+5 - 5 - 3.lst          NO         NO         NO            NO        
+5 - 5 - 4.lst          NO         NO         NO            NO        
+5 - 5- 2.lst           NO         NO         NO            NO        
+6 - 5.lst              NO         NO         NO            NO        
+7 - 5.lst              NO         NO         NO            NO        
+7 - 6.lst              NO         NO         NO            NO        

@@ -1,0 +1,17 @@
+Graph Name             Dirac      Ore        Erdos_Hobbs   Jackson   
+----------------------------------------------------------------------
+10 - 5.lst             NO         NO         NO            NO        
+12 - 5.lst             NO         NO         NO            NO        
+3 - 14.lst             NO         NO         NO            NO        
+3 - 16.lst             NO         NO         NO            NO        
+3 - 17.lst             NO         NO         NO            NO        
+3 - 18.lst             NO         NO         NO            NO        
+3 - 20.lst             NO         NO         NO            NO        
+3 - 23.lst             NO         NO         NO            NO        
+3 - 25.lst             NO         NO         NO            NO        
+3 - 29.lst             NO         NO         NO            NO        
+3 - 30.lst             NO         NO         NO            NO        
+4 - 10.lst             NO         NO         NO            NO        
+4 - 9.lst              NO         NO         NO            NO        
+5 - 10.lst             NO         NO         NO            NO        
+7 - 8.lst              NO         NO         NO            NO        

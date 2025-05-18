@@ -16,7 +16,8 @@
   "3,6-cage": {
     "title": "Heawood Graph",
     "description": "(3,6)-cage",
-    "image": "images/cages/3-6.png",
+    "image": "images/cages_2/3-6.png",
+    "altImages": ["images/ham/3-6-ham.png"],
     "parameters": {
       "Vertices": 14,
       "Edges": 21,
@@ -30,7 +31,9 @@
   "3,7-cage": {
     "title": "McGee Graph",
     "description": "(3,7)-cage",
-    "image": "images/cages/3-7.png",
+    "image": "images/cages_2/3-7.png",
+        "altImages": ["images/ham/3-7-ham.png"],
+
     "parameters": {
       "Vertices": 24,
       "Edges": 36,
@@ -44,7 +47,8 @@
   "3,8-cage": {
     "title": "Tutte-Coxeter Graph",
     "description": "(3,8)-cage",
-    "image": "images/cages/3-8.png",
+    "image": "images/cages_2/3-8.png",
+    "altImages": ["images/ham/3-8-ham.png"],
     "parameters": {
       "Vertices": 30,
       "Edges": 45,
@@ -58,7 +62,8 @@
   "3,9-cage": {
     "title": "(3,9)-cage",
     "description": "This page contains just one cage, but there are 17 other cages with parameters (3,9).",
-    "image": "images/cages/3-9.png",
+    "image": "images/cages_2/3-9.png",
+    "altImages": ["images/ham/3-9-ham.png"],
     "parameters": {
       "Vertices": 58,
       "Edges": 87,
@@ -72,7 +77,8 @@
   "3,10-cage": {
     "title": "(3,10)-cage",
     "description": "This page contains just one cage, but there are 2 other cages with parameters (3,10).",
-    "image": "images/cages/3-10.png",
+    "image": "images/cages_2/3-10.png",
+    "altImages": ["images/ham/3-10-ham.png"],
     "parameters": {
       "Vertices": 70,
       "Edges": 105,
@@ -86,7 +92,8 @@
   "3,11-cage": {
     "title": "Balaban Graph",
     "description": "(3,11)-cage",
-    "image": "images/cages/3-11.png",
+    "image": "images/cages_2/3-11.png",
+    "altImages": ["images/ham/3-11-ham.png"],
     "parameters": {
       "Vertices": 112,
       "Edges": 168,
@@ -100,7 +107,8 @@
   "3,12-cage": {
     "title": "Benson Graph ",
     "description": "(3,12)-cage",
-    "image": "images/cages/3-12.png",
+    "image": "images/cages_2/3-12.png",
+    "altImages": ["images/ham/3-12-ham.png"],
     "parameters": {
       "Vertices": 126,
       "Edges": 189,
@@ -114,7 +122,8 @@
   "4,5-cage": {
     "title": "Robertson Graph ",
     "description": "(4,5)-cage",
-    "image": "images/cages/4-5.png",
+    "image": "images/cages_2/4-5.png",
+    "altImages": ["images/ham/4-5-ham.png"],
     "parameters": {
       "Vertices": 19,
       "Edges": 38,
@@ -128,7 +137,8 @@
   "5,5-cage": {
     "title": "(5,5)-cage",
     "description": "This page contains just one cage, but there are 2 other cages with parameters (5,5).",
-    "image": "images/cages/5-5.png",
+    "image": "images/cages_2/5-5.png",
+    "altImages": ["images/ham/5-5-ham.png"],
     "parameters": {
       "Vertices": 30,
       "Edges": 75,
@@ -142,7 +152,8 @@
   "6,5-cage": {
     "title": "(6,5)-cage",
     "description": "",
-    "image": "images/cages/6-5.png",
+    "image": "images/cages_2/6-5.png",
+    "altImages": ["images/ham/6-5-ham.png"],
     "parameters": {
       "Vertices": 40,
       "Edges": 120,
@@ -156,7 +167,8 @@
   "7,5-cage": {
     "title": "(7,5)-cage",
     "description": "",
-    "image": "images/cages/7-5.png",
+    "image": "images/cages_2/7-5.png",
+    "altImages": ["images/ham/7-5-ham.png"],
     "parameters": {
       "Vertices": 50,
       "Edges": 175,
@@ -167,10 +179,26 @@
     "hamiltonCycleFile": "Output from TSP/7 - 5 - OUTPUT.ham",
     "graph": "Graphs/Cages/7 - 5.lst"
   },
+  "7,6-cage": {
+    "title": "(7,6)-cage",
+    "description": "",
+    "image": "images/cages_2/7-6.png",
+    "altImages": ["images/ham/7-6-ham.png"],
+    "parameters": {
+      "Vertices": 90,
+      "Edges": 315,
+      "Degree": 7,
+      "Girth": 6
+    },
+    "tspInput" : "Input for TSP/7 - 6 - TSP.tsp",
+    "hamiltonCycleFile": "Output from TSP/7 - 6 - OUTPUT.ham",
+    "graph": "Graphs/Cages/7 - 6.lst"
+  },
   "4,7-cage": {
     "title": "(4,7)-cage",
     "description": "",
-    "image": "images/cages/4-7.png",
+    "image": "images/cages_2/4-7.png",
+    "altImages": ["images/ham/4-7-ham.png"],
     "parameters": {
       "Vertices": 67,
       "Edges": 134,
@@ -182,9 +210,10 @@
     "graph": "Graphs/Cages/4 - 7.lst"
   },
   "3,14-rec": {
-    "title": "Rec(3,14)",
+    "title": "rec(3,14)",
     "description": "",
-    "image": "images/record/3-14.png",
+    "image": "images/record_2/3-14.png",
+    "altImages": ["images/ham/3-14-ham.png"],
     "parameters": {
       "Vertices": 384,
       "Edges": 576,
@@ -196,9 +225,10 @@
     "graph": null
   },
   "3,16-rec": {
-    "title": "Rec(3,16)",
+    "title": "rec(3,16)",
     "description": "",
-    "image": "images/record/3-16.png",
+    "image": "images/record_2/3-16.png",
+    "altImages": ["images/ham/3-16-ham.png"],
     "parameters": {
       "Vertices": 960,
       "Edges": 1440,
@@ -210,9 +240,10 @@
     "graph": null
   },
   "3,17-rec": {
-    "title": "Rec(3,17)",
+    "title": "rec(3,17)",
     "description": "",
-    "image": "images/record/3-17.png",
+    "image": "images/record_2/3-17.png",
+    "altImages": ["images/ham/3-17-ham.png"],
     "parameters": {
       "Vertices": 2176,
       "Edges": 3264,
@@ -224,9 +255,10 @@
     "graph": null
   },
   "3,18-rec": {
-    "title": "Rec(3,18)",
+    "title": "rec(3,18)",
     "description": "",
-    "image": "images/record/3-18.png",
+    "image": "images/record_2/3-18.png",
+    "altImages": ["images/ham/3-18-ham.png"],
     "parameters": {
       "Vertices": 2560,
       "Edges": 3840,
@@ -238,9 +270,10 @@
     "graph": null
   },
   "3,20-rec": {
-    "title": "Rec(3,20)",
+    "title": "rec(3,20)",
     "description": "",
-    "image": "images/record/3-20.png",
+    "image": "images/record_2/3-20.png",
+    "altImages": ["images/ham/3-20-ham.png"],
     "parameters": {
       "Vertices": 5376,
       "Edges": 8064,
@@ -252,9 +285,10 @@
     "graph": null
   },
   "4,9-rec": {
-    "title": "Rec(4,9)",
+    "title": "rec(4,9)",
     "description": "",
-    "image": "images/record/4-9.png",
+    "image": "images/record_2/4-9.png",
+    "altImages": ["images/ham/4-9-ham.png"],
     "parameters": {
       "Vertices": 275,
       "Edges": 550,
@@ -266,9 +300,10 @@
     "graph": null
   },
   "4,10-rec": {
-    "title": "Rec(4,10)",
+    "title": "rec(4,10)",
     "description": "",
-    "image": "images/record/4-10.png",
+    "image": "images/record_2/4-10.png",
+    "altImages": ["images/ham/4-10-ham.png"],
     "parameters": {
       "Vertices": 384,
       "Edges": 768,
@@ -280,9 +315,10 @@
     "graph": null
   },
   "5,10-rec": {
-    "title": "Rec(5,10)",
+    "title": "rec(5,10)",
     "description": "",
-    "image": "images/record/5-10.png",
+    "image": "images/record_2/5-10.png",
+    "altImages": ["images/ham/5-10-ham.png"],
     "parameters": {
       "Vertices": 1458,
       "Edges": 3645,
@@ -294,9 +330,10 @@
     "graph": null
   },
   "7,8-rec": {
-    "title": "Rec(7,8)",
+    "title": "rec(7,8)",
     "description": "",
-    "image": "images/record/7-8.png",
+    "image": "images/record_2/7-8.png",
+    "altImages": ["images/ham/7-8-ham.png"],
     "parameters": {
       "Vertices": 672,
       "Edges": 2353,
@@ -308,9 +345,10 @@
     "graph": null
   },
   "10,5-rec": {
-    "title": "Rec(10,5)",
+    "title": "rec(10,5)",
     "description": "",
-    "image": "images/record/10-5.png",
+    "image": "images/record_2/10-5.png",
+    "altImages": ["images/ham/10-5-ham.png"],
     "parameters": {
       "Vertices": 126,
       "Edges": 630,
@@ -322,9 +360,10 @@
     "graph": null
   },
   "12,5-rec": {
-    "title": "Rec(12,5)",
+    "title": "rec(12,5)",
     "description": "",
-    "image": "images/record/12-5.png",
+    "image": "images/record_2/12-5.png",
+    "altImages": ["images/ham/12-5-ham.png"],
     "parameters": {
       "Vertices": 203,
       "Edges": 1218,
@@ -334,5 +373,37 @@
     "tspInput" : null,
     "hamiltonCycleFile": null,
     "graph": null
+  },
+
+  "3,5-excess-1": {
+    "title": "(3,5)-graph",
+    "description": "Excess 2 - first of two.",
+    "image": "images/cages_2/excess-3-5-1.png",
+    "altImages": ["images/ham/excess-3-5-1-ham.png"],
+    "parameters": {
+      "Vertices": 12,
+      "Edges": 18,
+      "Degree": 3,
+      "Girth": 5
+    },
+    "tspInput" : null,
+    "hamiltonCycleFile": "Output from TSP/excess-3-5-1 - OUTPUT.ham",
+    "graph": "Graphs/Cages/excess-3-5-1.lst"
+  },
+
+  "3,5-excess-2": {
+    "title": "(3,5)-graph",
+    "description": "Excess 2 - second of two.",
+    "image": "images/cages_2/excess-3-5-2.png",
+    "altImages": ["images/ham/excess-3-5-2-ham.png"],
+    "parameters": {
+      "Vertices": 12,
+      "Edges": 18,
+      "Degree": 3,
+      "Girth": 5
+    },
+    "tspInput" : null,
+    "hamiltonCycleFile": "Output from TSP/excess-3-5-2 - OUTPUT.ham",
+    "graph": "Graphs/Cages/excess-3-5-2.lst"
   }
 }
